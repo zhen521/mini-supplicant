@@ -1,0 +1,17 @@
+https://archive.openwrt.org/barrier_breaker/14.07/ramips/mt7620a/OpenWrt-SDK-ramips-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2
+https://archive.openwrt.org/barrier_breaker/14.07/ramips/mt7620a/OpenWrt-Toolchain-ramips-for-mipsel_24kec+dsp-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2
+
+
+
+cd package/lean/
+git clone https://github.com/lyq1996/openwrt-atclient.git
+cd ..
+cd ..
+make menuconfig
+
+make package/lean/openwrt-atclient/compile V=s
+
+$ atclient -u 19120642135@GZCJXY.GZ -p 07015817 -d eth0.2
+atclient -u 19120642135@GZCJXY.GZ -p 07015817 -d eth0.2 -s int -i 183.3.154.3
+atclient -u 19120642135@GZCJXY.GZ -p 07015817 -d eth0.2 -s int -i 183.3.154.3 > /dev/null &
+
